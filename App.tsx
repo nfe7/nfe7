@@ -18,7 +18,6 @@ const PERSONAL_INFO = {
   name: "Nick Feng",
   githubUsername: "nfe7",
   email: "nick.feng@example.com", 
-  // Profile image is now automatically fetched from GitHub
   social: {
     linkedin: "https://linkedin.com",
     github: "https://github.com/nfe7"
