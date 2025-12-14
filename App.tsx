@@ -18,7 +18,7 @@ const PERSONAL_INFO = {
   name: "Nick Feng",
   githubUsername: "nfe7",
   email: "nick.feng@example.com", 
-  profileImage: "/assets/profile.jpg", 
+  // Profile image is now automatically fetched from GitHub
   social: {
     linkedin: "https://linkedin.com",
     github: "https://github.com/nfe7"
@@ -59,7 +59,8 @@ function App() {
   const [selectedPdf, setSelectedPdf] = useState<GitHubFile | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [avatarUrl, setAvatarUrl] = useState<string>(PERSONAL_INFO.profileImage);
+  // Initialize directly with GitHub avatar shortcut to avoid needing local assets
+  const [avatarUrl, setAvatarUrl] = useState<string>(`https://github.com/${PERSONAL_INFO.githubUsername}.png`);
 
   // Load Data
   useEffect(() => {
